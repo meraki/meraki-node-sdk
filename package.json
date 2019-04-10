@@ -1,6 +1,6 @@
 {
   "name": "merakidashboardapilib",
-  "version": "1.7.0",
+  "version": "0.0.0",
   "description": "This collection of API calls provides an easy way to interact with a Cisco Meraki network",
   "main": "./lib/index.js",
   "repository": {
