@@ -573,7 +573,7 @@ function getNetworkAirMarshal(input, callback)
     var input = [];
         input['networkId'] = 'networkId';
         input['t0'] = 't0';
-        input['timespan'] = 114;
+        input['timespan'] = 87;
 
     controller.getNetworkAirMarshal(input, function(error, response, context) {
 
@@ -1079,7 +1079,7 @@ function getDeviceCameraAnalyticsOverview(input, callback)
         input['serial'] = 'serial';
         input['t0'] = 't0';
         input['t1'] = 't1';
-        input['timespan'] = 114;
+        input['timespan'] = 87;
 
     controller.getDeviceCameraAnalyticsOverview(input, function(error, response, context) {
 
@@ -1125,8 +1125,8 @@ function getDeviceCameraAnalyticsZoneHistory(input, callback)
         input['zoneId'] = 'zoneId';
         input['t0'] = 't0';
         input['t1'] = 't1';
-        input['timespan'] = 114;
-        input['resolution'] = 114;
+        input['timespan'] = 87;
+        input['resolution'] = 87;
 
     controller.getDeviceCameraAnalyticsZoneHistory(input, function(error, response, context) {
 
@@ -4286,8 +4286,8 @@ function getOrganizationWebhookLogs(input, callback)
         input['organizationId'] = 'organizationId';
         input['t0'] = 't0';
         input['t1'] = 't1';
-        input['timespan'] = 205;
-        input['perPage'] = 205;
+        input['timespan'] = 179;
+        input['perPage'] = 179;
         input['startingAfter'] = 'startingAfter';
         input['endingBefore'] = 'endingBefore';
         input['url'] = 'url';
@@ -7354,10 +7354,10 @@ function getOrganizationSecurityEvents(input, callback)
 
     var input = [];
         input['organizationId'] = 'organizationId';
-        input['perPage'] = 164;
+        input['perPage'] = 137;
         input['t0'] = 't0';
         input['t1'] = 't1';
-        input['timespan'] = 164;
+        input['timespan'] = 137;
         input['startingAfter'] = 'startingAfter';
         input['endingBefore'] = 'endingBefore';
 
@@ -7403,10 +7403,10 @@ function getNetworkSecurityEvents(input, callback)
 
     var input = [];
         input['networkId'] = 'networkId';
-        input['perPage'] = 164;
+        input['perPage'] = 229;
         input['t0'] = 't0';
         input['t1'] = 't1';
-        input['timespan'] = 164;
+        input['timespan'] = 229;
         input['startingAfter'] = 'startingAfter';
         input['endingBefore'] = 'endingBefore';
 
@@ -9347,10 +9347,10 @@ function getNetworkClientSecurityEvents(input, callback)
     var input = [];
         input['networkId'] = 'networkId';
         input['clientId'] = 'clientId';
-        input['perPage'] = 0;
+        input['perPage'] = 65;
         input['t0'] = 't0';
         input['t1'] = 't1';
-        input['timespan'] = 0;
+        input['timespan'] = 65;
         input['startingAfter'] = 'startingAfter';
         input['endingBefore'] = 'endingBefore';
 
@@ -9980,8 +9980,8 @@ function getNetworkDeviceLossAndLatencyHistory(input, callback)
         input['ip'] = 'ip';
         input['t0'] = 't0';
         input['t1'] = 't1';
-        input['timespan'] = 0;
-        input['resolution'] = 0;
+        input['timespan'] = 65;
+        input['resolution'] = 65;
         input['uplink'] = 'uplink';
 
     controller.getNetworkDeviceLossAndLatencyHistory(input, function(error, response, context) {
@@ -10165,7 +10165,7 @@ function getNetworkClientEvents(input, callback)
     var input = [];
         input['networkId'] = 'networkId';
         input['idOrMacOrIp'] = 'idOrMacOrIp';
-        input['perPage'] = 0;
+        input['perPage'] = 65;
         input['startingAfter'] = 'startingAfter';
         input['endingBefore'] = 'endingBefore';
 
@@ -10210,7 +10210,7 @@ function getNetworkClientTrafficHistory(input, callback)
     var input = [];
         input['networkId'] = 'networkId';
         input['idOrMacOrIp'] = 'idOrMacOrIp';
-        input['perPage'] = 0;
+        input['perPage'] = 65;
         input['startingAfter'] = 'startingAfter';
         input['endingBefore'] = 'endingBefore';
 
@@ -10253,7 +10253,7 @@ function getDeviceClients(input, callback)
     var input = [];
         input['serial'] = 'serial';
         input['t0'] = 't0';
-        input['timespan'] = 0;
+        input['timespan'] = 65;
 
     controller.getDeviceClients(input, function(error, response, context) {
 
@@ -10617,8 +10617,8 @@ function getNetworkClientLatencyHistory(input, callback)
         input['idOrMacOrIp'] = 'idOrMacOrIp';
         input['t0'] = 't0';
         input['t1'] = 't1';
-        input['timespan'] = 214;
-        input['resolution'] = 214;
+        input['timespan'] = 65;
+        input['resolution'] = 65;
 
     controller.getNetworkClientLatencyHistory(input, function(error, response, context) {
 
@@ -10662,8 +10662,8 @@ function getNetworkClients(input, callback)
     var input = [];
         input['networkId'] = 'networkId';
         input['t0'] = 't0';
-        input['timespan'] = 214;
-        input['perPage'] = 214;
+        input['timespan'] = 65;
+        input['perPage'] = 65;
         input['startingAfter'] = 'startingAfter';
         input['endingBefore'] = 'endingBefore';
 
@@ -10905,7 +10905,7 @@ function getNetworkBluetoothClients(input, callback)
 
     var input = [];
         input['networkId'] = 'networkId';
-        input['perPage'] = 214;
+        input['perPage'] = 65;
         input['startingAfter'] = 'startingAfter';
         input['endingBefore'] = 'endingBefore';
         input['timespan'] = 'timespan';
@@ -10970,8 +10970,8 @@ function getOrganizationApiRequests(input, callback)
         input['organizationId'] = 'organizationId';
         input['t0'] = 't0';
         input['t1'] = 't1';
-        input['timespan'] = 214;
-        input['perPage'] = 214;
+        input['timespan'] = 65;
+        input['perPage'] = 65;
         input['startingAfter'] = 'startingAfter';
         input['endingBefore'] = 'endingBefore';
         input['adminId'] = 'adminId';
