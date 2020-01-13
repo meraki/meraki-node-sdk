@@ -2,7 +2,7 @@
 
 The Cisco Meraki Dashboard API is a modern REST API based on the OpenAPI specification.
 
-> Date: 02 December, 2019
+> Date: 13 January, 2020
 >
 > [What's New](https://meraki.io/whats-new/)
 
@@ -138,6 +138,7 @@ lib.Configuration.xCiscoMerakiAPIKey = "xCiscoMerakiAPIKey";
 * [AdminsController](#admins_controller)
 * [AlertSettingsController](#alert_settings_controller)
 * [BluetoothClientsController](#bluetooth_clients_controller)
+* [CameraQualityRetentionProfilesController](#camera_quality_retention_profiles_controller)
 * [CamerasController](#cameras_controller)
 * [ClientsController](#clients_controller)
 * [ConfigTemplatesController](#config_templates_controller)
@@ -153,6 +154,13 @@ lib.Configuration.xCiscoMerakiAPIKey = "xCiscoMerakiAPIKey";
 * [HTTPServersController](#http_servers_controller)
 * [IntrusionSettingsController](#intrusion_settings_controller)
 * [LicensesController](#licenses_controller)
+* [LinkAggregationsController](#link_aggregations_controller)
+* [MGDHCPSettingsController](#mgdhcp_settings_controller)
+* [MGLANSettingsController](#mglan_settings_controller)
+* [MGConnectivityMonitoringDestinationsController](#mg_connectivity_monitoring_destinations_controller)
+* [MGPortForwardingRulesController](#mg_port_forwarding_rules_controller)
+* [MGSubnetPoolSettingsController](#mg_subnet_pool_settings_controller)
+* [MGUplinkSettingsController](#mg_uplink_settings_controller)
 * [MRL3FirewallController](#mrl3_firewall_controller)
 * [MVSenseController](#mv_sense_controller)
 * [MX11NATRulesController](#mx11_nat_rules_controller)
@@ -163,6 +171,7 @@ lib.Configuration.xCiscoMerakiAPIKey = "xCiscoMerakiAPIKey";
 * [MXVLANPortsController](#mxvlan_ports_controller)
 * [MXVPNFirewallController](#mxvpn_firewall_controller)
 * [MXCellularFirewallController](#mx_cellular_firewall_controller)
+* [MXInboundFirewallController](#mx_inbound_firewall_controller)
 * [MXPortForwardingRulesController](#mx_port_forwarding_rules_controller)
 * [MXStaticRoutesController](#mx_static_routes_controller)
 * [MXWarmSpareSettingsController](#mx_warm_spare_settings_controller)
@@ -183,7 +192,7 @@ lib.Configuration.xCiscoMerakiAPIKey = "xCiscoMerakiAPIKey";
 * [SecurityEventsController](#security_events_controller)
 * [SplashLoginAttemptsController](#splash_login_attempts_controller)
 * [SplashSettingsController](#splash_settings_controller)
-* [SwitchACLsController](#switch_ac_ls_controller)
+* [SwitchAclsController](#switch_acls_controller)
 * [SwitchPortSchedulesController](#switch_port_schedules_controller)
 * [SwitchPortsController](#switch_ports_controller)
 * [SwitchProfilesController](#switch_profiles_controller)
@@ -243,14 +252,14 @@ function getOrganizationApiRequests(input, callback)
         input['organizationId'] = 'organizationId';
         input['t0'] = 't0';
         input['t1'] = 't1';
-        input['timespan'] = 85.8862906465709;
-        input['perPage'] = 85;
+        input['timespan'] = 153.584231095661;
+        input['perPage'] = 153;
         input['startingAfter'] = 'startingAfter';
         input['endingBefore'] = 'endingBefore';
         input['adminId'] = 'adminId';
         input['path'] = 'path';
         input['method'] = 'method';
-        input['responseCode'] = 85;
+        input['responseCode'] = 153;
         input['sourceIp'] = 'sourceIp';
 
     controller.getOrganizationApiRequests(input, function(error, response, context) {
@@ -696,8 +705,8 @@ function getNetworkBluetoothClients(input, callback)
     var input = [];
         input['networkId'] = 'networkId';
         input['t0'] = 't0';
-        input['timespan'] = 177.381572538233;
-        input['perPage'] = 177;
+        input['timespan'] = 153.584231095661;
+        input['perPage'] = 153;
         input['startingAfter'] = 'startingAfter';
         input['endingBefore'] = 'endingBefore';
         input['includeConnectivityHistory'] = true;
@@ -737,9 +746,185 @@ function getNetworkBluetoothClient(input, callback)
         input['networkId'] = 'networkId';
         input['bluetoothClientId'] = 'bluetoothClientId';
         input['includeConnectivityHistory'] = true;
-        input['connectivityHistoryTimespan'] = 177;
+        input['connectivityHistoryTimespan'] = 153;
 
     controller.getNetworkBluetoothClient(input, function(error, response, context) {
+
+    
+    });
+```
+
+
+
+[Back to List of Controllers](#list_of_controllers)
+
+## <a name="camera_quality_retention_profiles_controller"></a>![Class: ](https://apidocs.io/img/class.png ".CameraQualityRetentionProfilesController") CameraQualityRetentionProfilesController
+
+### Get singleton instance
+
+The singleton instance of the ``` CameraQualityRetentionProfilesController ``` class can be accessed from the API Client.
+
+```javascript
+var controller = lib.CameraQualityRetentionProfilesController;
+```
+
+### <a name="get_network_camera_quality_retention_profiles"></a>![Method: ](https://apidocs.io/img/method.png ".CameraQualityRetentionProfilesController.getNetworkCameraQualityRetentionProfiles") getNetworkCameraQualityRetentionProfiles
+
+> List the quality retention profiles for this network
+
+
+```javascript
+function getNetworkCameraQualityRetentionProfiles(networkId, callback)
+```
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| networkId |  ``` Required ```  | TODO: Add a parameter description |
+
+
+
+#### Example Usage
+
+```javascript
+
+    var networkId = 'networkId';
+
+    controller.getNetworkCameraQualityRetentionProfiles(networkId, function(error, response, context) {
+
+    
+    });
+```
+
+
+
+### <a name="create_network_camera_quality_retention_profile"></a>![Method: ](https://apidocs.io/img/method.png ".CameraQualityRetentionProfilesController.createNetworkCameraQualityRetentionProfile") createNetworkCameraQualityRetentionProfile
+
+> Creates new quality retention profile for this network.
+
+
+```javascript
+function createNetworkCameraQualityRetentionProfile(input, callback)
+```
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| networkId |  ``` Required ```  | TODO: Add a parameter description |
+| createNetworkCameraQualityRetentionProfile |  ``` Required ```  | TODO: Add a parameter description |
+
+
+
+#### Example Usage
+
+```javascript
+
+    var input = [];
+        input['networkId'] = 'networkId';
+        input['createNetworkCameraQualityRetentionProfile'] = new CreateNetworkCameraQualityRetentionProfileModel({"key":"value"});
+
+    controller.createNetworkCameraQualityRetentionProfile(input, function(error, response, context) {
+
+    
+    });
+```
+
+
+
+### <a name="get_network_camera_quality_retention_profile"></a>![Method: ](https://apidocs.io/img/method.png ".CameraQualityRetentionProfilesController.getNetworkCameraQualityRetentionProfile") getNetworkCameraQualityRetentionProfile
+
+> Retrieve a single quality retention profile
+
+
+```javascript
+function getNetworkCameraQualityRetentionProfile(input, callback)
+```
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| networkId |  ``` Required ```  | TODO: Add a parameter description |
+| qualityRetentionProfileId |  ``` Required ```  | TODO: Add a parameter description |
+
+
+
+#### Example Usage
+
+```javascript
+
+    var input = [];
+        input['networkId'] = 'networkId';
+        input['qualityRetentionProfileId'] = 'qualityRetentionProfileId';
+
+    controller.getNetworkCameraQualityRetentionProfile(input, function(error, response, context) {
+
+    
+    });
+```
+
+
+
+### <a name="update_network_camera_quality_retention_profile"></a>![Method: ](https://apidocs.io/img/method.png ".CameraQualityRetentionProfilesController.updateNetworkCameraQualityRetentionProfile") updateNetworkCameraQualityRetentionProfile
+
+> Update an existing quality retention profile for this network.
+
+
+```javascript
+function updateNetworkCameraQualityRetentionProfile(input, callback)
+```
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| networkId |  ``` Required ```  | TODO: Add a parameter description |
+| qualityRetentionProfileId |  ``` Required ```  | TODO: Add a parameter description |
+| updateNetworkCameraQualityRetentionProfile |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+
+#### Example Usage
+
+```javascript
+
+    var input = [];
+        input['networkId'] = 'networkId';
+        input['qualityRetentionProfileId'] = 'qualityRetentionProfileId';
+        input['updateNetworkCameraQualityRetentionProfile'] = new UpdateNetworkCameraQualityRetentionProfileModel({"key":"value"});
+
+    controller.updateNetworkCameraQualityRetentionProfile(input, function(error, response, context) {
+
+    
+    });
+```
+
+
+
+### <a name="delete_network_camera_quality_retention_profile"></a>![Method: ](https://apidocs.io/img/method.png ".CameraQualityRetentionProfilesController.deleteNetworkCameraQualityRetentionProfile") deleteNetworkCameraQualityRetentionProfile
+
+> Delete an existing quality retention profile for this network.
+
+
+```javascript
+function deleteNetworkCameraQualityRetentionProfile(input, callback)
+```
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| networkId |  ``` Required ```  | TODO: Add a parameter description |
+| qualityRetentionProfileId |  ``` Required ```  | TODO: Add a parameter description |
+
+
+
+#### Example Usage
+
+```javascript
+
+    var input = [];
+        input['networkId'] = 'networkId';
+        input['qualityRetentionProfileId'] = 'qualityRetentionProfileId';
+
+    controller.deleteNetworkCameraQualityRetentionProfile(input, function(error, response, context) {
 
     
     });
@@ -758,6 +943,99 @@ The singleton instance of the ``` CamerasController ``` class can be accessed fr
 ```javascript
 var controller = lib.CamerasController;
 ```
+
+### <a name="get_device_camera_quality_and_retention_settings"></a>![Method: ](https://apidocs.io/img/method.png ".CamerasController.getDeviceCameraQualityAndRetentionSettings") getDeviceCameraQualityAndRetentionSettings
+
+> Returns quality and retention settings for the given camera
+
+
+```javascript
+function getDeviceCameraQualityAndRetentionSettings(serial, callback)
+```
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| serial |  ``` Required ```  | TODO: Add a parameter description |
+
+
+
+#### Example Usage
+
+```javascript
+
+    var serial = 'serial';
+
+    controller.getDeviceCameraQualityAndRetentionSettings(serial, function(error, response, context) {
+
+    
+    });
+```
+
+
+
+### <a name="update_device_camera_quality_and_retention_settings"></a>![Method: ](https://apidocs.io/img/method.png ".CamerasController.updateDeviceCameraQualityAndRetentionSettings") updateDeviceCameraQualityAndRetentionSettings
+
+> Update quality and retention settings for the given camera
+
+
+```javascript
+function updateDeviceCameraQualityAndRetentionSettings(input, callback)
+```
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| serial |  ``` Required ```  | TODO: Add a parameter description |
+| updateDeviceCameraQualityAndRetentionSettings |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+
+#### Example Usage
+
+```javascript
+
+    var input = [];
+        input['serial'] = 'serial';
+        input['updateDeviceCameraQualityAndRetentionSettings'] = new UpdateDeviceCameraQualityAndRetentionSettingsModel({"key":"value"});
+
+    controller.updateDeviceCameraQualityAndRetentionSettings(input, function(error, response, context) {
+
+    
+    });
+```
+
+
+
+### <a name="get_network_camera_schedules"></a>![Method: ](https://apidocs.io/img/method.png ".CamerasController.getNetworkCameraSchedules") getNetworkCameraSchedules
+
+> Returns a list of all camera recording schedules.
+
+
+```javascript
+function getNetworkCameraSchedules(networkId, callback)
+```
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| networkId |  ``` Required ```  | TODO: Add a parameter description |
+
+
+
+#### Example Usage
+
+```javascript
+
+    var networkId = 'networkId';
+
+    controller.getNetworkCameraSchedules(networkId, function(error, response, context) {
+
+    
+    });
+```
+
+
 
 ### <a name="generate_network_camera_snapshot"></a>![Method: ](https://apidocs.io/img/method.png ".CamerasController.generateNetworkCameraSnapshot") generateNetworkCameraSnapshot
 
@@ -866,7 +1144,7 @@ function getDeviceClients(input, callback)
     var input = [];
         input['serial'] = 'serial';
         input['t0'] = 't0';
-        input['timespan'] = 177.381572538233;
+        input['timespan'] = 153.584231095661;
 
     controller.getDeviceClients(input, function(error, response, context) {
 
@@ -904,8 +1182,8 @@ function getNetworkClients(input, callback)
     var input = [];
         input['networkId'] = 'networkId';
         input['t0'] = 't0';
-        input['timespan'] = 177.381572538233;
-        input['perPage'] = 177;
+        input['timespan'] = 153.584231095661;
+        input['perPage'] = 153;
         input['startingAfter'] = 'startingAfter';
         input['endingBefore'] = 'endingBefore';
 
@@ -1010,7 +1288,7 @@ function getNetworkClientEvents(input, callback)
     var input = [];
         input['networkId'] = 'networkId';
         input['clientId'] = 'clientId';
-        input['perPage'] = 177;
+        input['perPage'] = 153;
         input['startingAfter'] = 'startingAfter';
         input['endingBefore'] = 'endingBefore';
 
@@ -1052,8 +1330,8 @@ function getNetworkClientLatencyHistory(input, callback)
         input['clientId'] = 'clientId';
         input['t0'] = 't0';
         input['t1'] = 't1';
-        input['timespan'] = 177.381572538233;
-        input['resolution'] = 177;
+        input['timespan'] = 153.584231095661;
+        input['resolution'] = 153;
 
     controller.getNetworkClientLatencyHistory(input, function(error, response, context) {
 
@@ -1226,7 +1504,7 @@ function getNetworkClientTrafficHistory(input, callback)
     var input = [];
         input['networkId'] = 'networkId';
         input['clientId'] = 'clientId';
-        input['perPage'] = 177;
+        input['perPage'] = 153;
         input['startingAfter'] = 'startingAfter';
         input['endingBefore'] = 'endingBefore';
 
@@ -1832,7 +2110,7 @@ function claimNetworkDevices(input, callback)
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | networkId |  ``` Required ```  | TODO: Add a parameter description |
-| claimNetworkDevices |  ``` Required ```  | TODO: Add a parameter description |
+| claimNetworkDevices |  ``` Optional ```  | TODO: Add a parameter description |
 
 
 
@@ -1980,7 +2258,7 @@ function getNetworkDeviceLldpCdp(input, callback)
     var input = [];
         input['networkId'] = 'networkId';
         input['serial'] = 'serial';
-        input['timespan'] = 180;
+        input['timespan'] = 153;
 
     controller.getNetworkDeviceLldpCdp(input, function(error, response, context) {
 
@@ -2023,8 +2301,8 @@ function getNetworkDeviceLossAndLatencyHistory(input, callback)
         input['ip'] = 'ip';
         input['t0'] = 't0';
         input['t1'] = 't1';
-        input['timespan'] = 180.995019874999;
-        input['resolution'] = 180;
+        input['timespan'] = 153.584231095661;
+        input['resolution'] = 153;
         input['uplink'] = Object.keys(uplink)[0];
 
     controller.getNetworkDeviceLossAndLatencyHistory(input, function(error, response, context) {
@@ -2183,6 +2461,7 @@ function getOrganizationDevices(input, callback)
 | perPage |  ``` Optional ```  | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. |
 | startingAfter |  ``` Optional ```  | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. |
 | endingBefore |  ``` Optional ```  | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. |
+| configurationUpdatedAfter |  ``` Optional ```  | Filter results by whether or not the device's configuration has been updated after the given timestamp |
 
 
 
@@ -2192,9 +2471,10 @@ function getOrganizationDevices(input, callback)
 
     var input = [];
         input['organizationId'] = 'organizationId';
-        input['perPage'] = 180;
+        input['perPage'] = 153;
         input['startingAfter'] = 'startingAfter';
         input['endingBefore'] = 'endingBefore';
+        input['configurationUpdatedAfter'] = 'configurationUpdatedAfter';
 
     controller.getOrganizationDevices(input, function(error, response, context) {
 
@@ -2229,7 +2509,7 @@ function getNetworkEvents(input, callback)
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | networkId |  ``` Required ```  | TODO: Add a parameter description |
-| productType |  ``` Optional ```  | The product type to fetch events for. This parameter is required for networks with multiple device types. Valid types are wireless, appliance, switch, systemsManager, and camera |
+| productType |  ``` Optional ```  | The product type to fetch events for. This parameter is required for networks with multiple device types. Valid types are wireless, appliance, switch, systemsManager, camera, and cellularGateway |
 | includedEventTypes |  ``` Optional ```  ``` Collection ```  | A list of event types. The returned events will be filtered to only include events with these types. |
 | excludedEventTypes |  ``` Optional ```  ``` Collection ```  | A list of event types. The returned events will be filtered to exclude events with these types. |
 | deviceMac |  ``` Optional ```  | The MAC address of the Meraki device which the list of events will be filtered with |
@@ -2263,7 +2543,7 @@ function getNetworkEvents(input, callback)
         input['clientName'] = 'clientName';
         input['smDeviceMac'] = 'smDeviceMac';
         input['smDeviceName'] = 'smDeviceName';
-        input['perPage'] = 180;
+        input['perPage'] = 153;
         input['startingAfter'] = 'startingAfter';
         input['endingBefore'] = 'endingBefore';
 
@@ -3187,7 +3467,7 @@ function getOrganizationLicenses(input, callback)
 
     var input = [];
         input['organizationId'] = 'organizationId';
-        input['perPage'] = 180;
+        input['perPage'] = 153;
         input['startingAfter'] = 'startingAfter';
         input['endingBefore'] = 'endingBefore';
         input['deviceSerial'] = 'deviceSerial';
@@ -3404,6 +3684,599 @@ function updateOrganizationLicense(input, callback)
 
 [Back to List of Controllers](#list_of_controllers)
 
+## <a name="link_aggregations_controller"></a>![Class: ](https://apidocs.io/img/class.png ".LinkAggregationsController") LinkAggregationsController
+
+### Get singleton instance
+
+The singleton instance of the ``` LinkAggregationsController ``` class can be accessed from the API Client.
+
+```javascript
+var controller = lib.LinkAggregationsController;
+```
+
+### <a name="get_network_switch_link_aggregations"></a>![Method: ](https://apidocs.io/img/method.png ".LinkAggregationsController.getNetworkSwitchLinkAggregations") getNetworkSwitchLinkAggregations
+
+> List link aggregation groups
+
+
+```javascript
+function getNetworkSwitchLinkAggregations(networkId, callback)
+```
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| networkId |  ``` Required ```  | TODO: Add a parameter description |
+
+
+
+#### Example Usage
+
+```javascript
+
+    var networkId = 'networkId';
+
+    controller.getNetworkSwitchLinkAggregations(networkId, function(error, response, context) {
+
+    
+    });
+```
+
+
+
+### <a name="create_network_switch_link_aggregation"></a>![Method: ](https://apidocs.io/img/method.png ".LinkAggregationsController.createNetworkSwitchLinkAggregation") createNetworkSwitchLinkAggregation
+
+> Create a link aggregation group
+
+
+```javascript
+function createNetworkSwitchLinkAggregation(input, callback)
+```
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| networkId |  ``` Required ```  | TODO: Add a parameter description |
+| createNetworkSwitchLinkAggregation |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+
+#### Example Usage
+
+```javascript
+
+    var input = [];
+        input['networkId'] = 'networkId';
+        input['createNetworkSwitchLinkAggregation'] = new CreateNetworkSwitchLinkAggregationModel({"key":"value"});
+
+    controller.createNetworkSwitchLinkAggregation(input, function(error, response, context) {
+
+    
+    });
+```
+
+
+
+### <a name="update_network_switch_link_aggregation"></a>![Method: ](https://apidocs.io/img/method.png ".LinkAggregationsController.updateNetworkSwitchLinkAggregation") updateNetworkSwitchLinkAggregation
+
+> Update a link aggregation group
+
+
+```javascript
+function updateNetworkSwitchLinkAggregation(input, callback)
+```
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| networkId |  ``` Required ```  | TODO: Add a parameter description |
+| linkAggregationId |  ``` Required ```  | TODO: Add a parameter description |
+| updateNetworkSwitchLinkAggregation |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+
+#### Example Usage
+
+```javascript
+
+    var input = [];
+        input['networkId'] = 'networkId';
+        input['linkAggregationId'] = 'linkAggregationId';
+        input['updateNetworkSwitchLinkAggregation'] = new UpdateNetworkSwitchLinkAggregationModel({"key":"value"});
+
+    controller.updateNetworkSwitchLinkAggregation(input, function(error, response, context) {
+
+    
+    });
+```
+
+
+
+### <a name="delete_network_switch_link_aggregation"></a>![Method: ](https://apidocs.io/img/method.png ".LinkAggregationsController.deleteNetworkSwitchLinkAggregation") deleteNetworkSwitchLinkAggregation
+
+> Split a link aggregation group into separate ports
+
+
+```javascript
+function deleteNetworkSwitchLinkAggregation(input, callback)
+```
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| networkId |  ``` Required ```  | TODO: Add a parameter description |
+| linkAggregationId |  ``` Required ```  | TODO: Add a parameter description |
+
+
+
+#### Example Usage
+
+```javascript
+
+    var input = [];
+        input['networkId'] = 'networkId';
+        input['linkAggregationId'] = 'linkAggregationId';
+
+    controller.deleteNetworkSwitchLinkAggregation(input, function(error, response, context) {
+
+    
+    });
+```
+
+
+
+[Back to List of Controllers](#list_of_controllers)
+
+## <a name="mgdhcp_settings_controller"></a>![Class: ](https://apidocs.io/img/class.png ".MGDHCPSettingsController") MGDHCPSettingsController
+
+### Get singleton instance
+
+The singleton instance of the ``` MGDHCPSettingsController ``` class can be accessed from the API Client.
+
+```javascript
+var controller = lib.MGDHCPSettingsController;
+```
+
+### <a name="get_network_cellular_gateway_settings_dhcp"></a>![Method: ](https://apidocs.io/img/method.png ".MGDHCPSettingsController.getNetworkCellularGatewaySettingsDhcp") getNetworkCellularGatewaySettingsDhcp
+
+> List common DHCP settings of MGs
+
+
+```javascript
+function getNetworkCellularGatewaySettingsDhcp(networkId, callback)
+```
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| networkId |  ``` Required ```  | TODO: Add a parameter description |
+
+
+
+#### Example Usage
+
+```javascript
+
+    var networkId = 'networkId';
+
+    controller.getNetworkCellularGatewaySettingsDhcp(networkId, function(error, response, context) {
+
+    
+    });
+```
+
+
+
+### <a name="update_network_cellular_gateway_settings_dhcp"></a>![Method: ](https://apidocs.io/img/method.png ".MGDHCPSettingsController.updateNetworkCellularGatewaySettingsDhcp") updateNetworkCellularGatewaySettingsDhcp
+
+> Update common DHCP settings of MGs
+
+
+```javascript
+function updateNetworkCellularGatewaySettingsDhcp(input, callback)
+```
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| networkId |  ``` Required ```  | TODO: Add a parameter description |
+| updateNetworkCellularGatewaySettingsDhcp |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+
+#### Example Usage
+
+```javascript
+
+    var input = [];
+        input['networkId'] = 'networkId';
+        input['updateNetworkCellularGatewaySettingsDhcp'] = new UpdateNetworkCellularGatewaySettingsDhcpModel({"key":"value"});
+
+    controller.updateNetworkCellularGatewaySettingsDhcp(input, function(error, response, context) {
+
+    
+    });
+```
+
+
+
+[Back to List of Controllers](#list_of_controllers)
+
+## <a name="mglan_settings_controller"></a>![Class: ](https://apidocs.io/img/class.png ".MGLANSettingsController") MGLANSettingsController
+
+### Get singleton instance
+
+The singleton instance of the ``` MGLANSettingsController ``` class can be accessed from the API Client.
+
+```javascript
+var controller = lib.MGLANSettingsController;
+```
+
+### <a name="get_device_cellular_gateway_settings"></a>![Method: ](https://apidocs.io/img/method.png ".MGLANSettingsController.getDeviceCellularGatewaySettings") getDeviceCellularGatewaySettings
+
+> Show the LAN Settings of a MG
+
+
+```javascript
+function getDeviceCellularGatewaySettings(serial, callback)
+```
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| serial |  ``` Required ```  | TODO: Add a parameter description |
+
+
+
+#### Example Usage
+
+```javascript
+
+    var serial = 'serial';
+
+    controller.getDeviceCellularGatewaySettings(serial, function(error, response, context) {
+
+    
+    });
+```
+
+
+
+### <a name="update_device_cellular_gateway_settings"></a>![Method: ](https://apidocs.io/img/method.png ".MGLANSettingsController.updateDeviceCellularGatewaySettings") updateDeviceCellularGatewaySettings
+
+> Update the LAN Settings for a single MG.
+
+
+```javascript
+function updateDeviceCellularGatewaySettings(input, callback)
+```
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| serial |  ``` Required ```  | TODO: Add a parameter description |
+| updateDeviceCellularGatewaySettings |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+
+#### Example Usage
+
+```javascript
+
+    var input = [];
+        input['serial'] = 'serial';
+        input['updateDeviceCellularGatewaySettings'] = new UpdateDeviceCellularGatewaySettingsModel({"key":"value"});
+
+    controller.updateDeviceCellularGatewaySettings(input, function(error, response, context) {
+
+    
+    });
+```
+
+
+
+[Back to List of Controllers](#list_of_controllers)
+
+## <a name="mg_connectivity_monitoring_destinations_controller"></a>![Class: ](https://apidocs.io/img/class.png ".MGConnectivityMonitoringDestinationsController") MGConnectivityMonitoringDestinationsController
+
+### Get singleton instance
+
+The singleton instance of the ``` MGConnectivityMonitoringDestinationsController ``` class can be accessed from the API Client.
+
+```javascript
+var controller = lib.MGConnectivityMonitoringDestinationsController;
+```
+
+### <a name="get_network_cellular_gateway_settings_connectivity_monitoring_destinations"></a>![Method: ](https://apidocs.io/img/method.png ".MGConnectivityMonitoringDestinationsController.getNetworkCellularGatewaySettingsConnectivityMonitoringDestinations") getNetworkCellularGatewaySettingsConnectivityMonitoringDestinations
+
+> Return the connectivity testing destinations for an MG network
+
+
+```javascript
+function getNetworkCellularGatewaySettingsConnectivityMonitoringDestinations(networkId, callback)
+```
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| networkId |  ``` Required ```  | TODO: Add a parameter description |
+
+
+
+#### Example Usage
+
+```javascript
+
+    var networkId = 'networkId';
+
+    controller.getNetworkCellularGatewaySettingsConnectivityMonitoringDestinations(networkId, function(error, response, context) {
+
+    
+    });
+```
+
+
+
+### <a name="update_network_cellular_gateway_settings_connectivity_monitoring_destinations"></a>![Method: ](https://apidocs.io/img/method.png ".MGConnectivityMonitoringDestinationsController.updateNetworkCellularGatewaySettingsConnectivityMonitoringDestinations") updateNetworkCellularGatewaySettingsConnectivityMonitoringDestinations
+
+> Update the connectivity testing destinations for an MG network
+
+
+```javascript
+function updateNetworkCellularGatewaySettingsConnectivityMonitoringDestinations(input, callback)
+```
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| networkId |  ``` Required ```  | TODO: Add a parameter description |
+| updateNetworkCellularGatewaySettingsConnectivityMonitoringDestinations |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+
+#### Example Usage
+
+```javascript
+
+    var input = [];
+        input['networkId'] = 'networkId';
+        input['updateNetworkCellularGatewaySettingsConnectivityMonitoringDestinations'] = new UpdateNetworkCellularGatewaySettingsConnectivityMonitoringDestinationsModel({"key":"value"});
+
+    controller.updateNetworkCellularGatewaySettingsConnectivityMonitoringDestinations(input, function(error, response, context) {
+
+    
+    });
+```
+
+
+
+[Back to List of Controllers](#list_of_controllers)
+
+## <a name="mg_port_forwarding_rules_controller"></a>![Class: ](https://apidocs.io/img/class.png ".MGPortForwardingRulesController") MGPortForwardingRulesController
+
+### Get singleton instance
+
+The singleton instance of the ``` MGPortForwardingRulesController ``` class can be accessed from the API Client.
+
+```javascript
+var controller = lib.MGPortForwardingRulesController;
+```
+
+### <a name="get_device_cellular_gateway_settings_port_forwarding_rules"></a>![Method: ](https://apidocs.io/img/method.png ".MGPortForwardingRulesController.getDeviceCellularGatewaySettingsPortForwardingRules") getDeviceCellularGatewaySettingsPortForwardingRules
+
+> Returns the port forwarding rules for a single MG.
+
+
+```javascript
+function getDeviceCellularGatewaySettingsPortForwardingRules(serial, callback)
+```
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| serial |  ``` Required ```  | TODO: Add a parameter description |
+
+
+
+#### Example Usage
+
+```javascript
+
+    var serial = 'serial';
+
+    controller.getDeviceCellularGatewaySettingsPortForwardingRules(serial, function(error, response, context) {
+
+    
+    });
+```
+
+
+
+### <a name="update_device_cellular_gateway_settings_port_forwarding_rules"></a>![Method: ](https://apidocs.io/img/method.png ".MGPortForwardingRulesController.updateDeviceCellularGatewaySettingsPortForwardingRules") updateDeviceCellularGatewaySettingsPortForwardingRules
+
+> Updates the port forwarding rules for a single MG.
+
+
+```javascript
+function updateDeviceCellularGatewaySettingsPortForwardingRules(input, callback)
+```
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| serial |  ``` Required ```  | TODO: Add a parameter description |
+| updateDeviceCellularGatewaySettingsPortForwardingRules |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+
+#### Example Usage
+
+```javascript
+
+    var input = [];
+        input['serial'] = 'serial';
+        input['updateDeviceCellularGatewaySettingsPortForwardingRules'] = new UpdateDeviceCellularGatewaySettingsPortForwardingRulesModel({"key":"value"});
+
+    controller.updateDeviceCellularGatewaySettingsPortForwardingRules(input, function(error, response, context) {
+
+    
+    });
+```
+
+
+
+[Back to List of Controllers](#list_of_controllers)
+
+## <a name="mg_subnet_pool_settings_controller"></a>![Class: ](https://apidocs.io/img/class.png ".MGSubnetPoolSettingsController") MGSubnetPoolSettingsController
+
+### Get singleton instance
+
+The singleton instance of the ``` MGSubnetPoolSettingsController ``` class can be accessed from the API Client.
+
+```javascript
+var controller = lib.MGSubnetPoolSettingsController;
+```
+
+### <a name="get_network_cellular_gateway_settings_subnet_pool"></a>![Method: ](https://apidocs.io/img/method.png ".MGSubnetPoolSettingsController.getNetworkCellularGatewaySettingsSubnetPool") getNetworkCellularGatewaySettingsSubnetPool
+
+> Return the subnet pool and mask configured for MGs in the network.
+
+
+```javascript
+function getNetworkCellularGatewaySettingsSubnetPool(networkId, callback)
+```
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| networkId |  ``` Required ```  | TODO: Add a parameter description |
+
+
+
+#### Example Usage
+
+```javascript
+
+    var networkId = 'networkId';
+
+    controller.getNetworkCellularGatewaySettingsSubnetPool(networkId, function(error, response, context) {
+
+    
+    });
+```
+
+
+
+### <a name="update_network_cellular_gateway_settings_subnet_pool"></a>![Method: ](https://apidocs.io/img/method.png ".MGSubnetPoolSettingsController.updateNetworkCellularGatewaySettingsSubnetPool") updateNetworkCellularGatewaySettingsSubnetPool
+
+> Update the subnet pool and mask configuration for MGs in the network.
+
+
+```javascript
+function updateNetworkCellularGatewaySettingsSubnetPool(input, callback)
+```
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| networkId |  ``` Required ```  | TODO: Add a parameter description |
+| updateNetworkCellularGatewaySettingsSubnetPool |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+
+#### Example Usage
+
+```javascript
+
+    var input = [];
+        input['networkId'] = 'networkId';
+        input['updateNetworkCellularGatewaySettingsSubnetPool'] = new UpdateNetworkCellularGatewaySettingsSubnetPoolModel({"key":"value"});
+
+    controller.updateNetworkCellularGatewaySettingsSubnetPool(input, function(error, response, context) {
+
+    
+    });
+```
+
+
+
+[Back to List of Controllers](#list_of_controllers)
+
+## <a name="mg_uplink_settings_controller"></a>![Class: ](https://apidocs.io/img/class.png ".MGUplinkSettingsController") MGUplinkSettingsController
+
+### Get singleton instance
+
+The singleton instance of the ``` MGUplinkSettingsController ``` class can be accessed from the API Client.
+
+```javascript
+var controller = lib.MGUplinkSettingsController;
+```
+
+### <a name="get_network_cellular_gateway_settings_uplink"></a>![Method: ](https://apidocs.io/img/method.png ".MGUplinkSettingsController.getNetworkCellularGatewaySettingsUplink") getNetworkCellularGatewaySettingsUplink
+
+> Returns the uplink settings for your MG network.
+
+
+```javascript
+function getNetworkCellularGatewaySettingsUplink(networkId, callback)
+```
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| networkId |  ``` Required ```  | TODO: Add a parameter description |
+
+
+
+#### Example Usage
+
+```javascript
+
+    var networkId = 'networkId';
+
+    controller.getNetworkCellularGatewaySettingsUplink(networkId, function(error, response, context) {
+
+    
+    });
+```
+
+
+
+### <a name="update_network_cellular_gateway_settings_uplink"></a>![Method: ](https://apidocs.io/img/method.png ".MGUplinkSettingsController.updateNetworkCellularGatewaySettingsUplink") updateNetworkCellularGatewaySettingsUplink
+
+> Updates the uplink settings for your MG network.
+
+
+```javascript
+function updateNetworkCellularGatewaySettingsUplink(input, callback)
+```
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| networkId |  ``` Required ```  | TODO: Add a parameter description |
+| updateNetworkCellularGatewaySettingsUplink |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+
+#### Example Usage
+
+```javascript
+
+    var input = [];
+        input['networkId'] = 'networkId';
+        input['updateNetworkCellularGatewaySettingsUplink'] = new UpdateNetworkCellularGatewaySettingsUplinkModel({"key":"value"});
+
+    controller.updateNetworkCellularGatewaySettingsUplink(input, function(error, response, context) {
+
+    
+    });
+```
+
+
+
+[Back to List of Controllers](#list_of_controllers)
+
 ## <a name="mrl3_firewall_controller"></a>![Class: ](https://apidocs.io/img/class.png ".MRL3FirewallController") MRL3FirewallController
 
 ### Get singleton instance
@@ -3552,7 +4425,7 @@ function getDeviceCameraAnalyticsOverview(input, callback)
         input['serial'] = 'serial';
         input['t0'] = 't0';
         input['t1'] = 't1';
-        input['timespan'] = 180.995019874999;
+        input['timespan'] = 153.584231095661;
         input['objectType'] = Object.keys(objectType)[0];
 
     controller.getDeviceCameraAnalyticsOverview(input, function(error, response, context) {
@@ -3657,8 +4530,8 @@ function getDeviceCameraAnalyticsZoneHistory(input, callback)
         input['zoneId'] = 'zoneId';
         input['t0'] = 't0';
         input['t1'] = 't1';
-        input['timespan'] = 180.995019874999;
-        input['resolution'] = 180;
+        input['timespan'] = 153.584231095661;
+        input['resolution'] = 153;
         input['objectType'] = Object.keys(objectType)[0];
 
     controller.getDeviceCameraAnalyticsZoneHistory(input, function(error, response, context) {
@@ -4264,6 +5137,81 @@ function updateNetworkCellularFirewallRules(input, callback)
         input['updateNetworkCellularFirewallRules'] = new UpdateNetworkCellularFirewallRulesModel({"key":"value"});
 
     controller.updateNetworkCellularFirewallRules(input, function(error, response, context) {
+
+    
+    });
+```
+
+
+
+[Back to List of Controllers](#list_of_controllers)
+
+## <a name="mx_inbound_firewall_controller"></a>![Class: ](https://apidocs.io/img/class.png ".MXInboundFirewallController") MXInboundFirewallController
+
+### Get singleton instance
+
+The singleton instance of the ``` MXInboundFirewallController ``` class can be accessed from the API Client.
+
+```javascript
+var controller = lib.MXInboundFirewallController;
+```
+
+### <a name="get_network_appliance_firewall_inbound_firewall_rules"></a>![Method: ](https://apidocs.io/img/method.png ".MXInboundFirewallController.getNetworkApplianceFirewallInboundFirewallRules") getNetworkApplianceFirewallInboundFirewallRules
+
+> Return the inbound firewall rules for an MX network
+
+
+```javascript
+function getNetworkApplianceFirewallInboundFirewallRules(networkId, callback)
+```
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| networkId |  ``` Required ```  | TODO: Add a parameter description |
+
+
+
+#### Example Usage
+
+```javascript
+
+    var networkId = 'networkId';
+
+    controller.getNetworkApplianceFirewallInboundFirewallRules(networkId, function(error, response, context) {
+
+    
+    });
+```
+
+
+
+### <a name="update_network_appliance_firewall_inbound_firewall_rules"></a>![Method: ](https://apidocs.io/img/method.png ".MXInboundFirewallController.updateNetworkApplianceFirewallInboundFirewallRules") updateNetworkApplianceFirewallInboundFirewallRules
+
+> Update the inbound firewall rules of an MX network
+
+
+```javascript
+function updateNetworkApplianceFirewallInboundFirewallRules(input, callback)
+```
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| networkId |  ``` Required ```  | TODO: Add a parameter description |
+| updateNetworkApplianceFirewallInboundFirewallRules |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+
+#### Example Usage
+
+```javascript
+
+    var input = [];
+        input['networkId'] = 'networkId';
+        input['updateNetworkApplianceFirewallInboundFirewallRules'] = new UpdateNetworkApplianceFirewallInboundFirewallRulesModel({"key":"value"});
+
+    controller.updateNetworkApplianceFirewallInboundFirewallRules(input, function(error, response, context) {
 
     
     });
@@ -4892,7 +5840,7 @@ function getNetworkSmTargetGroups(input, callback)
 
     var input = [];
         input['networkId'] = 'networkId';
-        input['withDetails'] = true;
+        input['withDetails'] = false;
 
     controller.getNetworkSmTargetGroups(input, function(error, response, context) {
 
@@ -4960,7 +5908,7 @@ function getNetworkSmTargetGroup(input, callback)
     var input = [];
         input['networkId'] = 'networkId';
         input['targetGroupId'] = 'targetGroupId';
-        input['withDetails'] = true;
+        input['withDetails'] = false;
 
     controller.getNetworkSmTargetGroup(input, function(error, response, context) {
 
@@ -5273,7 +6221,7 @@ function getNetworkAirMarshal(input, callback)
     var input = [];
         input['networkId'] = 'networkId';
         input['t0'] = 't0';
-        input['timespan'] = 180.995019874999;
+        input['timespan'] = 62.0889492039983;
 
     controller.getNetworkAirMarshal(input, function(error, response, context) {
 
@@ -5501,7 +6449,7 @@ function getNetworkTraffic(input, callback)
     var input = [];
         input['networkId'] = 'networkId';
         input['t0'] = 't0';
-        input['timespan'] = 180.995019874999;
+        input['timespan'] = 62.0889492039983;
         input['deviceType'] = 'deviceType';
 
     controller.getNetworkTraffic(input, function(error, response, context) {
@@ -5959,7 +6907,7 @@ function getOrganizationInventory(input, callback)
 
     var input = [];
         input['organizationId'] = 'organizationId';
-        input['includeLicenseInfo'] = true;
+        input['includeLicenseInfo'] = false;
 
     controller.getOrganizationInventory(input, function(error, response, context) {
 
@@ -6091,7 +7039,7 @@ function getOrganizationUplinksLossAndLatency(input, callback)
         input['organizationId'] = 'organizationId';
         input['t0'] = 't0';
         input['t1'] = 't1';
-        input['timespan'] = 180.995019874999;
+        input['timespan'] = 62.0889492039983;
         input['uplink'] = Object.keys(uplink)[0];
         input['ip'] = 'ip';
 
@@ -6519,7 +7467,7 @@ function getNetworkWirelessRfProfiles(input, callback)
 
     var input = [];
         input['networkId'] = 'networkId';
-        input['includeTemplateProfiles'] = true;
+        input['includeTemplateProfiles'] = false;
 
     controller.getNetworkWirelessRfProfiles(input, function(error, response, context) {
 
@@ -7193,7 +8141,7 @@ function getNetworkSmDevices(input, callback)
         input['serials'] = 'serials';
         input['ids'] = 'ids';
         input['scope'] = 'scope';
-        input['batchSize'] = 17;
+        input['batchSize'] = 62;
         input['batchToken'] = 'batchToken';
 
     controller.getNetworkSmDevices(input, function(error, response, context) {
@@ -8591,8 +9539,8 @@ function getNetworkClientSecurityEvents(input, callback)
         input['clientId'] = 'clientId';
         input['t0'] = 't0';
         input['t1'] = 't1';
-        input['timespan'] = 17.4903017666611;
-        input['perPage'] = 17;
+        input['timespan'] = 103.812122430565;
+        input['perPage'] = 103;
         input['startingAfter'] = 'startingAfter';
         input['endingBefore'] = 'endingBefore';
 
@@ -8634,8 +9582,8 @@ function getNetworkSecurityEvents(input, callback)
         input['networkId'] = 'networkId';
         input['t0'] = 't0';
         input['t1'] = 't1';
-        input['timespan'] = 17.4903017666611;
-        input['perPage'] = 17;
+        input['timespan'] = 103.812122430565;
+        input['perPage'] = 103;
         input['startingAfter'] = 'startingAfter';
         input['endingBefore'] = 'endingBefore';
 
@@ -8677,8 +9625,8 @@ function getOrganizationSecurityEvents(input, callback)
         input['organizationId'] = 'organizationId';
         input['t0'] = 't0';
         input['t1'] = 't1';
-        input['timespan'] = 17.4903017666611;
-        input['perPage'] = 17;
+        input['timespan'] = 103.812122430565;
+        input['perPage'] = 103;
         input['startingAfter'] = 'startingAfter';
         input['endingBefore'] = 'endingBefore';
 
@@ -8729,7 +9677,7 @@ function getNetworkSplashLoginAttempts(input, callback)
         input['networkId'] = 'networkId';
         input['ssidNumber'] = Object.keys(ssidNumber)[0];
         input['loginIdentifier'] = 'loginIdentifier';
-        input['timespan'] = 17;
+        input['timespan'] = 103;
 
     controller.getNetworkSplashLoginAttempts(input, function(error, response, context) {
 
@@ -8821,17 +9769,17 @@ function updateNetwork_ssids_PlashSettings(input, callback)
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="switch_ac_ls_controller"></a>![Class: ](https://apidocs.io/img/class.png ".SwitchACLsController") SwitchACLsController
+## <a name="switch_acls_controller"></a>![Class: ](https://apidocs.io/img/class.png ".SwitchAclsController") SwitchAclsController
 
 ### Get singleton instance
 
-The singleton instance of the ``` SwitchACLsController ``` class can be accessed from the API Client.
+The singleton instance of the ``` SwitchAclsController ``` class can be accessed from the API Client.
 
 ```javascript
-var controller = lib.SwitchACLsController;
+var controller = lib.SwitchAclsController;
 ```
 
-### <a name="get_network_switch_access_control_lists"></a>![Method: ](https://apidocs.io/img/method.png ".SwitchACLsController.getNetworkSwitchAccessControlLists") getNetworkSwitchAccessControlLists
+### <a name="get_network_switch_access_control_lists"></a>![Method: ](https://apidocs.io/img/method.png ".SwitchAclsController.getNetworkSwitchAccessControlLists") getNetworkSwitchAccessControlLists
 
 > Return the access control lists for a MS network
 
@@ -8861,7 +9809,7 @@ function getNetworkSwitchAccessControlLists(networkId, callback)
 
 
 
-### <a name="update_network_switch_access_control_lists"></a>![Method: ](https://apidocs.io/img/method.png ".SwitchACLsController.updateNetworkSwitchAccessControlLists") updateNetworkSwitchAccessControlLists
+### <a name="update_network_switch_access_control_lists"></a>![Method: ](https://apidocs.io/img/method.png ".SwitchAclsController.updateNetworkSwitchAccessControlLists") updateNetworkSwitchAccessControlLists
 
 > Update the access control lists for a MS network
 
@@ -9048,6 +9996,41 @@ The singleton instance of the ``` SwitchPortsController ``` class can be accesse
 ```javascript
 var controller = lib.SwitchPortsController;
 ```
+
+### <a name="get_device_switch_port_statuses"></a>![Method: ](https://apidocs.io/img/method.png ".SwitchPortsController.getDeviceSwitchPortStatuses") getDeviceSwitchPortStatuses
+
+> Return the status for all the ports of a switch
+
+
+```javascript
+function getDeviceSwitchPortStatuses(input, callback)
+```
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| serial |  ``` Required ```  | TODO: Add a parameter description |
+| t0 |  ``` Optional ```  | The beginning of the timespan for the data. The maximum lookback period is 31 days from today. |
+| timespan |  ``` Optional ```  | The timespan for which the information will be fetched. If specifying timespan, do not specify parameter t0. The value must be in seconds and be less than or equal to 31 days. The default is 1 day. |
+
+
+
+#### Example Usage
+
+```javascript
+
+    var input = [];
+        input['serial'] = 'serial';
+        input['t0'] = 't0';
+        input['timespan'] = 103.812122430565;
+
+    controller.getDeviceSwitchPortStatuses(input, function(error, response, context) {
+
+    
+    });
+```
+
+
 
 ### <a name="get_device_switch_ports"></a>![Method: ](https://apidocs.io/img/method.png ".SwitchPortsController.getDeviceSwitchPorts") getDeviceSwitchPorts
 
@@ -9685,7 +10668,7 @@ function updateNetworkSwitchSettingsQosRule(input, callback)
 
 ### <a name="get_network_switch_settings_storm_control"></a>![Method: ](https://apidocs.io/img/method.png ".SwitchSettingsController.getNetworkSwitchSettingsStormControl") getNetworkSwitchSettingsStormControl
 
-> Return the global enhanced storm control configuration
+> Return the storm control configuration for a switch network
 
 
 ```javascript
@@ -9715,7 +10698,7 @@ function getNetworkSwitchSettingsStormControl(networkId, callback)
 
 ### <a name="update_network_switch_settings_storm_control"></a>![Method: ](https://apidocs.io/img/method.png ".SwitchSettingsController.updateNetworkSwitchSettingsStormControl") updateNetworkSwitchSettingsStormControl
 
-> Update the global enhanced storm control configuration
+> Update the storm control configuration for a switch network
 
 
 ```javascript
@@ -10730,8 +11713,8 @@ function getOrganizationWebhookLogs(input, callback)
         input['organizationId'] = 'organizationId';
         input['t0'] = 't0';
         input['t1'] = 't1';
-        input['timespan'] = 17.4903017666611;
-        input['perPage'] = 17;
+        input['timespan'] = 103.812122430565;
+        input['perPage'] = 103;
         input['startingAfter'] = 'startingAfter';
         input['endingBefore'] = 'endingBefore';
         input['url'] = 'url';
@@ -10786,9 +11769,9 @@ function getNetworkClientsConnectionStats(input, callback)
         input['networkId'] = 'networkId';
         input['t0'] = 't0';
         input['t1'] = 't1';
-        input['timespan'] = 230.767128540095;
-        input['ssid'] = 230;
-        input['vlan'] = 230;
+        input['timespan'] = 103.812122430565;
+        input['ssid'] = 103;
+        input['vlan'] = 103;
         input['apTag'] = 'apTag';
 
     controller.getNetworkClientsConnectionStats(input, function(error, response, context) {
@@ -10830,9 +11813,9 @@ function getNetworkClientsLatencyStats(input, callback)
         input['networkId'] = 'networkId';
         input['t0'] = 't0';
         input['t1'] = 't1';
-        input['timespan'] = 230.767128540095;
-        input['ssid'] = 230;
-        input['vlan'] = 230;
+        input['timespan'] = 103.812122430565;
+        input['ssid'] = 103;
+        input['vlan'] = 103;
         input['apTag'] = 'apTag';
         input['fields'] = 'fields';
 
@@ -10876,9 +11859,9 @@ function getNetworkClientConnectionStats(input, callback)
         input['clientId'] = 'clientId';
         input['t0'] = 't0';
         input['t1'] = 't1';
-        input['timespan'] = 230.767128540095;
-        input['ssid'] = 230;
-        input['vlan'] = 230;
+        input['timespan'] = 103.812122430565;
+        input['ssid'] = 103;
+        input['vlan'] = 103;
         input['apTag'] = 'apTag';
 
     controller.getNetworkClientConnectionStats(input, function(error, response, context) {
@@ -10922,9 +11905,9 @@ function getNetworkClientLatencyStats(input, callback)
         input['clientId'] = 'clientId';
         input['t0'] = 't0';
         input['t1'] = 't1';
-        input['timespan'] = 230.767128540095;
-        input['ssid'] = 230;
-        input['vlan'] = 230;
+        input['timespan'] = 103.812122430565;
+        input['ssid'] = 103;
+        input['vlan'] = 103;
         input['apTag'] = 'apTag';
         input['fields'] = 'fields';
 
@@ -10966,9 +11949,9 @@ function getNetworkConnectionStats(input, callback)
         input['networkId'] = 'networkId';
         input['t0'] = 't0';
         input['t1'] = 't1';
-        input['timespan'] = 230.767128540095;
-        input['ssid'] = 230;
-        input['vlan'] = 230;
+        input['timespan'] = 103.812122430565;
+        input['ssid'] = 103;
+        input['vlan'] = 103;
         input['apTag'] = 'apTag';
 
     controller.getNetworkConnectionStats(input, function(error, response, context) {
@@ -11009,9 +11992,9 @@ function getNetworkDevicesConnectionStats(input, callback)
         input['networkId'] = 'networkId';
         input['t0'] = 't0';
         input['t1'] = 't1';
-        input['timespan'] = 230.767128540095;
-        input['ssid'] = 230;
-        input['vlan'] = 230;
+        input['timespan'] = 103.812122430565;
+        input['ssid'] = 103;
+        input['vlan'] = 103;
         input['apTag'] = 'apTag';
 
     controller.getNetworkDevicesConnectionStats(input, function(error, response, context) {
@@ -11053,9 +12036,9 @@ function getNetworkDevicesLatencyStats(input, callback)
         input['networkId'] = 'networkId';
         input['t0'] = 't0';
         input['t1'] = 't1';
-        input['timespan'] = 230.767128540095;
-        input['ssid'] = 230;
-        input['vlan'] = 230;
+        input['timespan'] = 103.812122430565;
+        input['ssid'] = 103;
+        input['vlan'] = 103;
         input['apTag'] = 'apTag';
         input['fields'] = 'fields';
 
@@ -11099,9 +12082,9 @@ function getNetworkDeviceConnectionStats(input, callback)
         input['serial'] = 'serial';
         input['t0'] = 't0';
         input['t1'] = 't1';
-        input['timespan'] = 230.767128540095;
-        input['ssid'] = 230;
-        input['vlan'] = 230;
+        input['timespan'] = 103.812122430565;
+        input['ssid'] = 103;
+        input['vlan'] = 103;
         input['apTag'] = 'apTag';
 
     controller.getNetworkDeviceConnectionStats(input, function(error, response, context) {
@@ -11145,9 +12128,9 @@ function getNetworkDeviceLatencyStats(input, callback)
         input['serial'] = 'serial';
         input['t0'] = 't0';
         input['t1'] = 't1';
-        input['timespan'] = 230.767128540095;
-        input['ssid'] = 230;
-        input['vlan'] = 230;
+        input['timespan'] = 103.812122430565;
+        input['ssid'] = 103;
+        input['vlan'] = 103;
         input['apTag'] = 'apTag';
         input['fields'] = 'fields';
 
@@ -11191,9 +12174,9 @@ function getNetworkFailedConnections(input, callback)
         input['networkId'] = 'networkId';
         input['t0'] = 't0';
         input['t1'] = 't1';
-        input['timespan'] = 230.767128540095;
-        input['ssid'] = 230;
-        input['vlan'] = 230;
+        input['timespan'] = 12.3168405389026;
+        input['ssid'] = 12;
+        input['vlan'] = 12;
         input['apTag'] = 'apTag';
         input['serial'] = 'serial';
         input['clientId'] = 'clientId';
@@ -11237,9 +12220,9 @@ function getNetworkLatencyStats(input, callback)
         input['networkId'] = 'networkId';
         input['t0'] = 't0';
         input['t1'] = 't1';
-        input['timespan'] = 230.767128540095;
-        input['ssid'] = 230;
-        input['vlan'] = 230;
+        input['timespan'] = 12.3168405389026;
+        input['ssid'] = 12;
+        input['vlan'] = 12;
         input['apTag'] = 'apTag';
         input['fields'] = 'fields';
 
