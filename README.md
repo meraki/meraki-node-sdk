@@ -2,7 +2,7 @@
 
 The Cisco Meraki Dashboard API is a modern REST API based on the OpenAPI specification.
 
-> Date: 13 January, 2020
+> Date: 03 February, 2020
 >
 > [What's New](https://meraki.io/whats-new/)
 
@@ -178,6 +178,7 @@ lib.Configuration.xCiscoMerakiAPIKey = "xCiscoMerakiAPIKey";
 * [MalwareSettingsController](#malware_settings_controller)
 * [ManagementInterfaceSettingsController](#management_interface_settings_controller)
 * [MerakiAuthUsersController](#meraki_auth_users_controller)
+* [MonitoredMediaServersController](#monitored_media_servers_controller)
 * [NamedTagScopeController](#named_tag_scope_controller)
 * [NetflowSettingsController](#netflow_settings_controller)
 * [NetworksController](#networks_controller)
@@ -252,14 +253,14 @@ function getOrganizationApiRequests(input, callback)
         input['organizationId'] = 'organizationId';
         input['t0'] = 't0';
         input['t1'] = 't1';
-        input['timespan'] = 153.584231095661;
-        input['perPage'] = 153;
+        input['timespan'] = 216.33871720002;
+        input['perPage'] = 216;
         input['startingAfter'] = 'startingAfter';
         input['endingBefore'] = 'endingBefore';
         input['adminId'] = 'adminId';
         input['path'] = 'path';
         input['method'] = 'method';
-        input['responseCode'] = 153;
+        input['responseCode'] = 216;
         input['sourceIp'] = 'sourceIp';
 
     controller.getOrganizationApiRequests(input, function(error, response, context) {
@@ -705,8 +706,8 @@ function getNetworkBluetoothClients(input, callback)
     var input = [];
         input['networkId'] = 'networkId';
         input['t0'] = 't0';
-        input['timespan'] = 153.584231095661;
-        input['perPage'] = 153;
+        input['timespan'] = 216.33871720002;
+        input['perPage'] = 216;
         input['startingAfter'] = 'startingAfter';
         input['endingBefore'] = 'endingBefore';
         input['includeConnectivityHistory'] = true;
@@ -746,7 +747,7 @@ function getNetworkBluetoothClient(input, callback)
         input['networkId'] = 'networkId';
         input['bluetoothClientId'] = 'bluetoothClientId';
         input['includeConnectivityHistory'] = true;
-        input['connectivityHistoryTimespan'] = 153;
+        input['connectivityHistoryTimespan'] = 216;
 
     controller.getNetworkBluetoothClient(input, function(error, response, context) {
 
@@ -1144,7 +1145,7 @@ function getDeviceClients(input, callback)
     var input = [];
         input['serial'] = 'serial';
         input['t0'] = 't0';
-        input['timespan'] = 153.584231095661;
+        input['timespan'] = 216.33871720002;
 
     controller.getDeviceClients(input, function(error, response, context) {
 
@@ -1182,8 +1183,8 @@ function getNetworkClients(input, callback)
     var input = [];
         input['networkId'] = 'networkId';
         input['t0'] = 't0';
-        input['timespan'] = 153.584231095661;
-        input['perPage'] = 153;
+        input['timespan'] = 216.33871720002;
+        input['perPage'] = 216;
         input['startingAfter'] = 'startingAfter';
         input['endingBefore'] = 'endingBefore';
 
@@ -1208,7 +1209,7 @@ function provisionNetworkClients(input, callback)
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | networkId |  ``` Required ```  | TODO: Add a parameter description |
-| provisionNetworkClients |  ``` Optional ```  | TODO: Add a parameter description |
+| provisionNetworkClients |  ``` Required ```  | TODO: Add a parameter description |
 
 
 
@@ -1288,7 +1289,7 @@ function getNetworkClientEvents(input, callback)
     var input = [];
         input['networkId'] = 'networkId';
         input['clientId'] = 'clientId';
-        input['perPage'] = 153;
+        input['perPage'] = 216;
         input['startingAfter'] = 'startingAfter';
         input['endingBefore'] = 'endingBefore';
 
@@ -1330,8 +1331,8 @@ function getNetworkClientLatencyHistory(input, callback)
         input['clientId'] = 'clientId';
         input['t0'] = 't0';
         input['t1'] = 't1';
-        input['timespan'] = 153.584231095661;
-        input['resolution'] = 153;
+        input['timespan'] = 216.33871720002;
+        input['resolution'] = 216;
 
     controller.getNetworkClientLatencyHistory(input, function(error, response, context) {
 
@@ -1504,7 +1505,7 @@ function getNetworkClientTrafficHistory(input, callback)
     var input = [];
         input['networkId'] = 'networkId';
         input['clientId'] = 'clientId';
-        input['perPage'] = 153;
+        input['perPage'] = 216;
         input['startingAfter'] = 'startingAfter';
         input['endingBefore'] = 'endingBefore';
 
@@ -2258,7 +2259,7 @@ function getNetworkDeviceLldpCdp(input, callback)
     var input = [];
         input['networkId'] = 'networkId';
         input['serial'] = 'serial';
-        input['timespan'] = 153;
+        input['timespan'] = 216;
 
     controller.getNetworkDeviceLldpCdp(input, function(error, response, context) {
 
@@ -2301,8 +2302,8 @@ function getNetworkDeviceLossAndLatencyHistory(input, callback)
         input['ip'] = 'ip';
         input['t0'] = 't0';
         input['t1'] = 't1';
-        input['timespan'] = 153.584231095661;
-        input['resolution'] = 153;
+        input['timespan'] = 216.33871720002;
+        input['resolution'] = 216;
         input['uplink'] = Object.keys(uplink)[0];
 
     controller.getNetworkDeviceLossAndLatencyHistory(input, function(error, response, context) {
@@ -2471,7 +2472,7 @@ function getOrganizationDevices(input, callback)
 
     var input = [];
         input['organizationId'] = 'organizationId';
-        input['perPage'] = 153;
+        input['perPage'] = 216;
         input['startingAfter'] = 'startingAfter';
         input['endingBefore'] = 'endingBefore';
         input['configurationUpdatedAfter'] = 'configurationUpdatedAfter';
@@ -2543,7 +2544,7 @@ function getNetworkEvents(input, callback)
         input['clientName'] = 'clientName';
         input['smDeviceMac'] = 'smDeviceMac';
         input['smDeviceName'] = 'smDeviceName';
-        input['perPage'] = 153;
+        input['perPage'] = 216;
         input['startingAfter'] = 'startingAfter';
         input['endingBefore'] = 'endingBefore';
 
@@ -3467,7 +3468,7 @@ function getOrganizationLicenses(input, callback)
 
     var input = [];
         input['organizationId'] = 'organizationId';
-        input['perPage'] = 153;
+        input['perPage'] = 216;
         input['startingAfter'] = 'startingAfter';
         input['endingBefore'] = 'endingBefore';
         input['deviceSerial'] = 'deviceSerial';
@@ -4425,7 +4426,7 @@ function getDeviceCameraAnalyticsOverview(input, callback)
         input['serial'] = 'serial';
         input['t0'] = 't0';
         input['t1'] = 't1';
-        input['timespan'] = 153.584231095661;
+        input['timespan'] = 52.833999091682;
         input['objectType'] = Object.keys(objectType)[0];
 
     controller.getDeviceCameraAnalyticsOverview(input, function(error, response, context) {
@@ -4530,8 +4531,8 @@ function getDeviceCameraAnalyticsZoneHistory(input, callback)
         input['zoneId'] = 'zoneId';
         input['t0'] = 't0';
         input['t1'] = 't1';
-        input['timespan'] = 153.584231095661;
-        input['resolution'] = 153;
+        input['timespan'] = 52.833999091682;
+        input['resolution'] = 52;
         input['objectType'] = Object.keys(objectType)[0];
 
     controller.getDeviceCameraAnalyticsZoneHistory(input, function(error, response, context) {
@@ -4672,7 +4673,7 @@ function updateNetworkOneToManyNatRules(input, callback)
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | networkId |  ``` Required ```  | TODO: Add a parameter description |
-| updateNetworkOneToManyNatRules |  ``` Optional ```  | TODO: Add a parameter description |
+| updateNetworkOneToManyNatRules |  ``` Required ```  | TODO: Add a parameter description |
 
 
 
@@ -5807,6 +5808,182 @@ function getNetworkMerakiAuthUser(input, callback)
 
 [Back to List of Controllers](#list_of_controllers)
 
+## <a name="monitored_media_servers_controller"></a>![Class: ](https://apidocs.io/img/class.png ".MonitoredMediaServersController") MonitoredMediaServersController
+
+### Get singleton instance
+
+The singleton instance of the ``` MonitoredMediaServersController ``` class can be accessed from the API Client.
+
+```javascript
+var controller = lib.MonitoredMediaServersController;
+```
+
+### <a name="get_organization_insight_monitored_media_servers"></a>![Method: ](https://apidocs.io/img/method.png ".MonitoredMediaServersController.getOrganizationInsightMonitoredMediaServers") getOrganizationInsightMonitoredMediaServers
+
+> List the monitored media servers for this organization. Only valid for organizations with Meraki Insight.
+
+
+```javascript
+function getOrganizationInsightMonitoredMediaServers(organizationId, callback)
+```
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| organizationId |  ``` Required ```  | TODO: Add a parameter description |
+
+
+
+#### Example Usage
+
+```javascript
+
+    var organizationId = 'organizationId';
+
+    controller.getOrganizationInsightMonitoredMediaServers(organizationId, function(error, response, context) {
+
+    
+    });
+```
+
+
+
+### <a name="create_organization_insight_monitored_media_server"></a>![Method: ](https://apidocs.io/img/method.png ".MonitoredMediaServersController.createOrganizationInsightMonitoredMediaServer") createOrganizationInsightMonitoredMediaServer
+
+> Add a media server to be monitored for this organization. Only valid for organizations with Meraki Insight.
+
+
+```javascript
+function createOrganizationInsightMonitoredMediaServer(input, callback)
+```
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| organizationId |  ``` Required ```  | TODO: Add a parameter description |
+| createOrganizationInsightMonitoredMediaServer |  ``` Required ```  | TODO: Add a parameter description |
+
+
+
+#### Example Usage
+
+```javascript
+
+    var input = [];
+        input['organizationId'] = 'organizationId';
+        input['createOrganizationInsightMonitoredMediaServer'] = new CreateOrganizationInsightMonitoredMediaServerModel({"key":"value"});
+
+    controller.createOrganizationInsightMonitoredMediaServer(input, function(error, response, context) {
+
+    
+    });
+```
+
+
+
+### <a name="get_organization_insight_monitored_media_server"></a>![Method: ](https://apidocs.io/img/method.png ".MonitoredMediaServersController.getOrganizationInsightMonitoredMediaServer") getOrganizationInsightMonitoredMediaServer
+
+> Return a monitored media server for this organization. Only valid for organizations with Meraki Insight.
+
+
+```javascript
+function getOrganizationInsightMonitoredMediaServer(input, callback)
+```
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| organizationId |  ``` Required ```  | TODO: Add a parameter description |
+| monitoredMediaServerId |  ``` Required ```  | TODO: Add a parameter description |
+
+
+
+#### Example Usage
+
+```javascript
+
+    var input = [];
+        input['organizationId'] = 'organizationId';
+        input['monitoredMediaServerId'] = 'monitoredMediaServerId';
+
+    controller.getOrganizationInsightMonitoredMediaServer(input, function(error, response, context) {
+
+    
+    });
+```
+
+
+
+### <a name="update_organization_insight_monitored_media_server"></a>![Method: ](https://apidocs.io/img/method.png ".MonitoredMediaServersController.updateOrganizationInsightMonitoredMediaServer") updateOrganizationInsightMonitoredMediaServer
+
+> Update a monitored media server for this organization. Only valid for organizations with Meraki Insight.
+
+
+```javascript
+function updateOrganizationInsightMonitoredMediaServer(input, callback)
+```
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| organizationId |  ``` Required ```  | TODO: Add a parameter description |
+| monitoredMediaServerId |  ``` Required ```  | TODO: Add a parameter description |
+| updateOrganizationInsightMonitoredMediaServer |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+
+#### Example Usage
+
+```javascript
+
+    var input = [];
+        input['organizationId'] = 'organizationId';
+        input['monitoredMediaServerId'] = 'monitoredMediaServerId';
+        input['updateOrganizationInsightMonitoredMediaServer'] = new UpdateOrganizationInsightMonitoredMediaServerModel({"key":"value"});
+
+    controller.updateOrganizationInsightMonitoredMediaServer(input, function(error, response, context) {
+
+    
+    });
+```
+
+
+
+### <a name="delete_organization_insight_monitored_media_server"></a>![Method: ](https://apidocs.io/img/method.png ".MonitoredMediaServersController.deleteOrganizationInsightMonitoredMediaServer") deleteOrganizationInsightMonitoredMediaServer
+
+> Delete a monitored media server from this organization. Only valid for organizations with Meraki Insight.
+
+
+```javascript
+function deleteOrganizationInsightMonitoredMediaServer(input, callback)
+```
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| organizationId |  ``` Required ```  | TODO: Add a parameter description |
+| monitoredMediaServerId |  ``` Required ```  | TODO: Add a parameter description |
+
+
+
+#### Example Usage
+
+```javascript
+
+    var input = [];
+        input['organizationId'] = 'organizationId';
+        input['monitoredMediaServerId'] = 'monitoredMediaServerId';
+
+    controller.deleteOrganizationInsightMonitoredMediaServer(input, function(error, response, context) {
+
+    
+    });
+```
+
+
+
+[Back to List of Controllers](#list_of_controllers)
+
 ## <a name="named_tag_scope_controller"></a>![Class: ](https://apidocs.io/img/class.png ".NamedTagScopeController") NamedTagScopeController
 
 ### Get singleton instance
@@ -6221,7 +6398,7 @@ function getNetworkAirMarshal(input, callback)
     var input = [];
         input['networkId'] = 'networkId';
         input['t0'] = 't0';
-        input['timespan'] = 62.0889492039983;
+        input['timespan'] = 52.833999091682;
 
     controller.getNetworkAirMarshal(input, function(error, response, context) {
 
@@ -6449,7 +6626,7 @@ function getNetworkTraffic(input, callback)
     var input = [];
         input['networkId'] = 'networkId';
         input['t0'] = 't0';
-        input['timespan'] = 62.0889492039983;
+        input['timespan'] = 52.833999091682;
         input['deviceType'] = 'deviceType';
 
     controller.getNetworkTraffic(input, function(error, response, context) {
@@ -7039,7 +7216,7 @@ function getOrganizationUplinksLossAndLatency(input, callback)
         input['organizationId'] = 'organizationId';
         input['t0'] = 't0';
         input['t1'] = 't1';
-        input['timespan'] = 62.0889492039983;
+        input['timespan'] = 52.833999091682;
         input['uplink'] = Object.keys(uplink)[0];
         input['ip'] = 'ip';
 
@@ -8141,7 +8318,7 @@ function getNetworkSmDevices(input, callback)
         input['serials'] = 'serials';
         input['ids'] = 'ids';
         input['scope'] = 'scope';
-        input['batchSize'] = 62;
+        input['batchSize'] = 52;
         input['batchToken'] = 'batchToken';
 
     controller.getNetworkSmDevices(input, function(error, response, context) {
@@ -8277,344 +8454,6 @@ function unenrollNetworkSmDevice(input, callback)
         input['deviceId'] = 'deviceId';
 
     controller.unenrollNetworkSmDevice(input, function(error, response, context) {
-
-    
-    });
-```
-
-
-
-### <a name="create_network_sm_profile_clarity"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.createNetworkSmProfileClarity") createNetworkSmProfileClarity
-
-> Create a new profile containing a Cisco Clarity payload
-
-
-```javascript
-function createNetworkSmProfileClarity(input, callback)
-```
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| networkId |  ``` Required ```  | TODO: Add a parameter description |
-| createNetworkSmProfileClarity |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```javascript
-
-    var input = [];
-        input['networkId'] = 'networkId';
-        input['createNetworkSmProfileClarity'] = new CreateNetworkSmProfileClarityModel({"key":"value"});
-
-    controller.createNetworkSmProfileClarity(input, function(error, response, context) {
-
-    
-    });
-```
-
-
-
-### <a name="update_network_sm_profile_clarity"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.updateNetworkSmProfileClarity") updateNetworkSmProfileClarity
-
-> Update an existing profile containing a Cisco Clarity payload
-
-
-```javascript
-function updateNetworkSmProfileClarity(input, callback)
-```
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| networkId |  ``` Required ```  | TODO: Add a parameter description |
-| profileId |  ``` Required ```  | TODO: Add a parameter description |
-| updateNetworkSmProfileClarity |  ``` Optional ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```javascript
-
-    var input = [];
-        input['networkId'] = 'networkId';
-        input['profileId'] = 'profileId';
-        input['updateNetworkSmProfileClarity'] = new UpdateNetworkSmProfileClarityModel({"key":"value"});
-
-    controller.updateNetworkSmProfileClarity(input, function(error, response, context) {
-
-    
-    });
-```
-
-
-
-### <a name="add_network_sm_profile_clarity"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.addNetworkSmProfileClarity") addNetworkSmProfileClarity
-
-> Add a Cisco Clarity payload to an existing profile
-
-
-```javascript
-function addNetworkSmProfileClarity(input, callback)
-```
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| networkId |  ``` Required ```  | TODO: Add a parameter description |
-| profileId |  ``` Required ```  | TODO: Add a parameter description |
-| addNetworkSmProfileClarity |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```javascript
-
-    var input = [];
-        input['networkId'] = 'networkId';
-        input['profileId'] = 'profileId';
-        input['addNetworkSmProfileClarity'] = new AddNetworkSmProfileClarityModel({"key":"value"});
-
-    controller.addNetworkSmProfileClarity(input, function(error, response, context) {
-
-    
-    });
-```
-
-
-
-### <a name="get_network_sm_profile_clarity"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.getNetworkSmProfileClarity") getNetworkSmProfileClarity
-
-> Get details for a Cisco Clarity payload
-
-
-```javascript
-function getNetworkSmProfileClarity(input, callback)
-```
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| networkId |  ``` Required ```  | TODO: Add a parameter description |
-| profileId |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```javascript
-
-    var input = [];
-        input['networkId'] = 'networkId';
-        input['profileId'] = 'profileId';
-
-    controller.getNetworkSmProfileClarity(input, function(error, response, context) {
-
-    
-    });
-```
-
-
-
-### <a name="delete_network_sm_profile_clarity"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.deleteNetworkSmProfileClarity") deleteNetworkSmProfileClarity
-
-> Delete a Cisco Clarity payload. Deletes the entire profile if it's empty after removing the payload.
-
-
-```javascript
-function deleteNetworkSmProfileClarity(input, callback)
-```
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| networkId |  ``` Required ```  | TODO: Add a parameter description |
-| profileId |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```javascript
-
-    var input = [];
-        input['networkId'] = 'networkId';
-        input['profileId'] = 'profileId';
-
-    controller.deleteNetworkSmProfileClarity(input, function(error, response, context) {
-
-    
-    });
-```
-
-
-
-### <a name="create_network_sm_profile_umbrella"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.createNetworkSmProfileUmbrella") createNetworkSmProfileUmbrella
-
-> Create a new profile containing a Cisco Umbrella payload
-
-
-```javascript
-function createNetworkSmProfileUmbrella(input, callback)
-```
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| networkId |  ``` Required ```  | TODO: Add a parameter description |
-| createNetworkSmProfileUmbrella |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```javascript
-
-    var input = [];
-        input['networkId'] = 'networkId';
-        input['createNetworkSmProfileUmbrella'] = new CreateNetworkSmProfileUmbrellaModel({"key":"value"});
-
-    controller.createNetworkSmProfileUmbrella(input, function(error, response, context) {
-
-    
-    });
-```
-
-
-
-### <a name="update_network_sm_profile_umbrella"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.updateNetworkSmProfileUmbrella") updateNetworkSmProfileUmbrella
-
-> Update an existing profile containing a Cisco Umbrella payload
-
-
-```javascript
-function updateNetworkSmProfileUmbrella(input, callback)
-```
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| networkId |  ``` Required ```  | TODO: Add a parameter description |
-| profileId |  ``` Required ```  | TODO: Add a parameter description |
-| updateNetworkSmProfileUmbrella |  ``` Optional ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```javascript
-
-    var input = [];
-        input['networkId'] = 'networkId';
-        input['profileId'] = 'profileId';
-        input['updateNetworkSmProfileUmbrella'] = new UpdateNetworkSmProfileUmbrellaModel({"key":"value"});
-
-    controller.updateNetworkSmProfileUmbrella(input, function(error, response, context) {
-
-    
-    });
-```
-
-
-
-### <a name="add_network_sm_profile_umbrella"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.addNetworkSmProfileUmbrella") addNetworkSmProfileUmbrella
-
-> Add a Cisco Umbrella payload to an existing profile
-
-
-```javascript
-function addNetworkSmProfileUmbrella(input, callback)
-```
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| networkId |  ``` Required ```  | TODO: Add a parameter description |
-| profileId |  ``` Required ```  | TODO: Add a parameter description |
-| addNetworkSmProfileUmbrella |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```javascript
-
-    var input = [];
-        input['networkId'] = 'networkId';
-        input['profileId'] = 'profileId';
-        input['addNetworkSmProfileUmbrella'] = new AddNetworkSmProfileUmbrellaModel({"key":"value"});
-
-    controller.addNetworkSmProfileUmbrella(input, function(error, response, context) {
-
-    
-    });
-```
-
-
-
-### <a name="get_network_sm_profile_umbrella"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.getNetworkSmProfileUmbrella") getNetworkSmProfileUmbrella
-
-> Get details for a Cisco Umbrella payload
-
-
-```javascript
-function getNetworkSmProfileUmbrella(input, callback)
-```
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| networkId |  ``` Required ```  | TODO: Add a parameter description |
-| profileId |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```javascript
-
-    var input = [];
-        input['networkId'] = 'networkId';
-        input['profileId'] = 'profileId';
-
-    controller.getNetworkSmProfileUmbrella(input, function(error, response, context) {
-
-    
-    });
-```
-
-
-
-### <a name="delete_network_sm_profile_umbrella"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.deleteNetworkSmProfileUmbrella") deleteNetworkSmProfileUmbrella
-
-> Delete a Cisco Umbrella payload. Deletes the entire profile if it's empty after removing the payload
-
-
-```javascript
-function deleteNetworkSmProfileUmbrella(input, callback)
-```
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| networkId |  ``` Required ```  | TODO: Add a parameter description |
-| profileId |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```javascript
-
-    var input = [];
-        input['networkId'] = 'networkId';
-        input['profileId'] = 'profileId';
-
-    controller.deleteNetworkSmProfileUmbrella(input, function(error, response, context) {
 
     
     });
@@ -9068,9 +8907,9 @@ function getNetworkSmConnectivity(input, callback)
 |-----------|------|-------------|
 | networkId |  ``` Required ```  | TODO: Add a parameter description |
 | id |  ``` Required ```  | TODO: Add a parameter description |
-| perPage |  ``` Optional ```  | The number of entries per page returned |
-| startingAfter |  ``` Optional ```  | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, next or prev page in the HTTP Link header should define it. |
-| endingBefore |  ``` Optional ```  | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, next or prev page in the HTTP Link header should define it. |
+| perPage |  ``` Optional ```  | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. |
+| startingAfter |  ``` Optional ```  | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. |
+| endingBefore |  ``` Optional ```  | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. |
 
 
 
@@ -9081,7 +8920,7 @@ function getNetworkSmConnectivity(input, callback)
     var input = [];
         input['networkId'] = network_id;
         input['id'] = 'id';
-        input['perPage'] = 'perPage';
+        input['perPage'] = 11;
         input['startingAfter'] = 'startingAfter';
         input['endingBefore'] = 'endingBefore';
 
@@ -9107,9 +8946,9 @@ function getNetworkSmDesktopLogs(input, callback)
 |-----------|------|-------------|
 | networkId |  ``` Required ```  | TODO: Add a parameter description |
 | id |  ``` Required ```  | TODO: Add a parameter description |
-| perPage |  ``` Optional ```  | The number of entries per page returned |
-| startingAfter |  ``` Optional ```  | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, next or prev page in the HTTP Link header should define it. |
-| endingBefore |  ``` Optional ```  | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, next or prev page in the HTTP Link header should define it. |
+| perPage |  ``` Optional ```  | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. |
+| startingAfter |  ``` Optional ```  | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. |
+| endingBefore |  ``` Optional ```  | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. |
 
 
 
@@ -9120,7 +8959,7 @@ function getNetworkSmDesktopLogs(input, callback)
     var input = [];
         input['networkId'] = network_id;
         input['id'] = 'id';
-        input['perPage'] = 'perPage';
+        input['perPage'] = 11;
         input['startingAfter'] = 'startingAfter';
         input['endingBefore'] = 'endingBefore';
 
@@ -9150,9 +8989,9 @@ function getNetworkSmDeviceCommandLogs(input, callback)
 |-----------|------|-------------|
 | networkId |  ``` Required ```  | TODO: Add a parameter description |
 | id |  ``` Required ```  | TODO: Add a parameter description |
-| perPage |  ``` Optional ```  | The number of entries per page returned |
-| startingAfter |  ``` Optional ```  | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, next or prev page in the HTTP Link header should define it. |
-| endingBefore |  ``` Optional ```  | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, next or prev page in the HTTP Link header should define it. |
+| perPage |  ``` Optional ```  | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. |
+| startingAfter |  ``` Optional ```  | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. |
+| endingBefore |  ``` Optional ```  | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. |
 
 
 
@@ -9163,7 +9002,7 @@ function getNetworkSmDeviceCommandLogs(input, callback)
     var input = [];
         input['networkId'] = network_id;
         input['id'] = 'id';
-        input['perPage'] = 'perPage';
+        input['perPage'] = 11;
         input['startingAfter'] = 'startingAfter';
         input['endingBefore'] = 'endingBefore';
 
@@ -9189,9 +9028,9 @@ function getNetworkSmPerformanceHistory(input, callback)
 |-----------|------|-------------|
 | networkId |  ``` Required ```  | TODO: Add a parameter description |
 | id |  ``` Required ```  | TODO: Add a parameter description |
-| perPage |  ``` Optional ```  | The number of entries per page returned |
-| startingAfter |  ``` Optional ```  | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, next or prev page in the HTTP Link header should define it. |
-| endingBefore |  ``` Optional ```  | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, next or prev page in the HTTP Link header should define it. |
+| perPage |  ``` Optional ```  | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. |
+| startingAfter |  ``` Optional ```  | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. |
+| endingBefore |  ``` Optional ```  | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. |
 
 
 
@@ -9202,7 +9041,7 @@ function getNetworkSmPerformanceHistory(input, callback)
     var input = [];
         input['networkId'] = network_id;
         input['id'] = 'id';
-        input['perPage'] = 'perPage';
+        input['perPage'] = 11;
         input['startingAfter'] = 'startingAfter';
         input['endingBefore'] = 'endingBefore';
 
@@ -9539,8 +9378,8 @@ function getNetworkClientSecurityEvents(input, callback)
         input['clientId'] = 'clientId';
         input['t0'] = 't0';
         input['t1'] = 't1';
-        input['timespan'] = 103.812122430565;
-        input['perPage'] = 103;
+        input['timespan'] = 11.1108258651154;
+        input['perPage'] = 11;
         input['startingAfter'] = 'startingAfter';
         input['endingBefore'] = 'endingBefore';
 
@@ -9582,8 +9421,8 @@ function getNetworkSecurityEvents(input, callback)
         input['networkId'] = 'networkId';
         input['t0'] = 't0';
         input['t1'] = 't1';
-        input['timespan'] = 103.812122430565;
-        input['perPage'] = 103;
+        input['timespan'] = 11.1108258651154;
+        input['perPage'] = 11;
         input['startingAfter'] = 'startingAfter';
         input['endingBefore'] = 'endingBefore';
 
@@ -9625,8 +9464,8 @@ function getOrganizationSecurityEvents(input, callback)
         input['organizationId'] = 'organizationId';
         input['t0'] = 't0';
         input['t1'] = 't1';
-        input['timespan'] = 103.812122430565;
-        input['perPage'] = 103;
+        input['timespan'] = 11.1108258651154;
+        input['perPage'] = 11;
         input['startingAfter'] = 'startingAfter';
         input['endingBefore'] = 'endingBefore';
 
@@ -9677,7 +9516,7 @@ function getNetworkSplashLoginAttempts(input, callback)
         input['networkId'] = 'networkId';
         input['ssidNumber'] = Object.keys(ssidNumber)[0];
         input['loginIdentifier'] = 'loginIdentifier';
-        input['timespan'] = 103;
+        input['timespan'] = 11;
 
     controller.getNetworkSplashLoginAttempts(input, function(error, response, context) {
 
@@ -10022,9 +9861,44 @@ function getDeviceSwitchPortStatuses(input, callback)
     var input = [];
         input['serial'] = 'serial';
         input['t0'] = 't0';
-        input['timespan'] = 103.812122430565;
+        input['timespan'] = 11.1108258651154;
 
     controller.getDeviceSwitchPortStatuses(input, function(error, response, context) {
+
+    
+    });
+```
+
+
+
+### <a name="get_device_switch_port_statuses_packets"></a>![Method: ](https://apidocs.io/img/method.png ".SwitchPortsController.getDeviceSwitchPortStatusesPackets") getDeviceSwitchPortStatusesPackets
+
+> Return the packet counters for all the ports of a switch
+
+
+```javascript
+function getDeviceSwitchPortStatusesPackets(input, callback)
+```
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| serial |  ``` Required ```  | TODO: Add a parameter description |
+| t0 |  ``` Optional ```  | The beginning of the timespan for the data. The maximum lookback period is 1 day from today. |
+| timespan |  ``` Optional ```  | The timespan for which the information will be fetched. If specifying timespan, do not specify parameter t0. The value must be in seconds and be less than or equal to 1 day. The default is 1 day. |
+
+
+
+#### Example Usage
+
+```javascript
+
+    var input = [];
+        input['serial'] = 'serial';
+        input['t0'] = 't0';
+        input['timespan'] = 11.1108258651154;
+
+    controller.getDeviceSwitchPortStatusesPackets(input, function(error, response, context) {
 
     
     });
@@ -10432,6 +10306,69 @@ function updateNetworkSwitchSettingsMtu(input, callback)
         input['updateNetworkSwitchSettingsMtu'] = new UpdateNetworkSwitchSettingsMtuModel({"key":"value"});
 
     controller.updateNetworkSwitchSettingsMtu(input, function(error, response, context) {
+
+    
+    });
+```
+
+
+
+### <a name="get_network_switch_settings_multicast"></a>![Method: ](https://apidocs.io/img/method.png ".SwitchSettingsController.getNetworkSwitchSettingsMulticast") getNetworkSwitchSettingsMulticast
+
+> Return Multicast settings for a network
+
+
+```javascript
+function getNetworkSwitchSettingsMulticast(networkId, callback)
+```
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| networkId |  ``` Required ```  | TODO: Add a parameter description |
+
+
+
+#### Example Usage
+
+```javascript
+
+    var networkId = 'networkId';
+
+    controller.getNetworkSwitchSettingsMulticast(networkId, function(error, response, context) {
+
+    
+    });
+```
+
+
+
+### <a name="update_network_switch_settings_multicast"></a>![Method: ](https://apidocs.io/img/method.png ".SwitchSettingsController.updateNetworkSwitchSettingsMulticast") updateNetworkSwitchSettingsMulticast
+
+> Update multicast settings for a network
+
+
+```javascript
+function updateNetworkSwitchSettingsMulticast(input, callback)
+```
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| networkId |  ``` Required ```  | TODO: Add a parameter description |
+| updateNetworkSwitchSettingsMulticast |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+
+#### Example Usage
+
+```javascript
+
+    var input = [];
+        input['networkId'] = 'networkId';
+        input['updateNetworkSwitchSettingsMulticast'] = new UpdateNetworkSwitchSettingsMulticastModel({"key":"value"});
+
+    controller.updateNetworkSwitchSettingsMulticast(input, function(error, response, context) {
 
     
     });
@@ -11713,8 +11650,8 @@ function getOrganizationWebhookLogs(input, callback)
         input['organizationId'] = 'organizationId';
         input['t0'] = 't0';
         input['t1'] = 't1';
-        input['timespan'] = 103.812122430565;
-        input['perPage'] = 103;
+        input['timespan'] = 11.1108258651154;
+        input['perPage'] = 11;
         input['startingAfter'] = 'startingAfter';
         input['endingBefore'] = 'endingBefore';
         input['url'] = 'url';
@@ -11769,9 +11706,9 @@ function getNetworkClientsConnectionStats(input, callback)
         input['networkId'] = 'networkId';
         input['t0'] = 't0';
         input['t1'] = 't1';
-        input['timespan'] = 103.812122430565;
-        input['ssid'] = 103;
-        input['vlan'] = 103;
+        input['timespan'] = 11.1108258651154;
+        input['ssid'] = 11;
+        input['vlan'] = 11;
         input['apTag'] = 'apTag';
 
     controller.getNetworkClientsConnectionStats(input, function(error, response, context) {
@@ -11813,9 +11750,9 @@ function getNetworkClientsLatencyStats(input, callback)
         input['networkId'] = 'networkId';
         input['t0'] = 't0';
         input['t1'] = 't1';
-        input['timespan'] = 103.812122430565;
-        input['ssid'] = 103;
-        input['vlan'] = 103;
+        input['timespan'] = 11.1108258651154;
+        input['ssid'] = 11;
+        input['vlan'] = 11;
         input['apTag'] = 'apTag';
         input['fields'] = 'fields';
 
@@ -11859,9 +11796,9 @@ function getNetworkClientConnectionStats(input, callback)
         input['clientId'] = 'clientId';
         input['t0'] = 't0';
         input['t1'] = 't1';
-        input['timespan'] = 103.812122430565;
-        input['ssid'] = 103;
-        input['vlan'] = 103;
+        input['timespan'] = 11.1108258651154;
+        input['ssid'] = 11;
+        input['vlan'] = 11;
         input['apTag'] = 'apTag';
 
     controller.getNetworkClientConnectionStats(input, function(error, response, context) {
@@ -11905,9 +11842,9 @@ function getNetworkClientLatencyStats(input, callback)
         input['clientId'] = 'clientId';
         input['t0'] = 't0';
         input['t1'] = 't1';
-        input['timespan'] = 103.812122430565;
-        input['ssid'] = 103;
-        input['vlan'] = 103;
+        input['timespan'] = 11.1108258651154;
+        input['ssid'] = 11;
+        input['vlan'] = 11;
         input['apTag'] = 'apTag';
         input['fields'] = 'fields';
 
@@ -11949,9 +11886,9 @@ function getNetworkConnectionStats(input, callback)
         input['networkId'] = 'networkId';
         input['t0'] = 't0';
         input['t1'] = 't1';
-        input['timespan'] = 103.812122430565;
-        input['ssid'] = 103;
-        input['vlan'] = 103;
+        input['timespan'] = 11.1108258651154;
+        input['ssid'] = 11;
+        input['vlan'] = 11;
         input['apTag'] = 'apTag';
 
     controller.getNetworkConnectionStats(input, function(error, response, context) {
@@ -11992,9 +11929,9 @@ function getNetworkDevicesConnectionStats(input, callback)
         input['networkId'] = 'networkId';
         input['t0'] = 't0';
         input['t1'] = 't1';
-        input['timespan'] = 103.812122430565;
-        input['ssid'] = 103;
-        input['vlan'] = 103;
+        input['timespan'] = 11.1108258651154;
+        input['ssid'] = 11;
+        input['vlan'] = 11;
         input['apTag'] = 'apTag';
 
     controller.getNetworkDevicesConnectionStats(input, function(error, response, context) {
@@ -12036,9 +11973,9 @@ function getNetworkDevicesLatencyStats(input, callback)
         input['networkId'] = 'networkId';
         input['t0'] = 't0';
         input['t1'] = 't1';
-        input['timespan'] = 103.812122430565;
-        input['ssid'] = 103;
-        input['vlan'] = 103;
+        input['timespan'] = 11.1108258651154;
+        input['ssid'] = 11;
+        input['vlan'] = 11;
         input['apTag'] = 'apTag';
         input['fields'] = 'fields';
 
@@ -12082,9 +12019,9 @@ function getNetworkDeviceConnectionStats(input, callback)
         input['serial'] = 'serial';
         input['t0'] = 't0';
         input['t1'] = 't1';
-        input['timespan'] = 103.812122430565;
-        input['ssid'] = 103;
-        input['vlan'] = 103;
+        input['timespan'] = 11.1108258651154;
+        input['ssid'] = 11;
+        input['vlan'] = 11;
         input['apTag'] = 'apTag';
 
     controller.getNetworkDeviceConnectionStats(input, function(error, response, context) {
@@ -12128,9 +12065,9 @@ function getNetworkDeviceLatencyStats(input, callback)
         input['serial'] = 'serial';
         input['t0'] = 't0';
         input['t1'] = 't1';
-        input['timespan'] = 103.812122430565;
-        input['ssid'] = 103;
-        input['vlan'] = 103;
+        input['timespan'] = 11.1108258651154;
+        input['ssid'] = 11;
+        input['vlan'] = 11;
         input['apTag'] = 'apTag';
         input['fields'] = 'fields';
 
@@ -12174,9 +12111,9 @@ function getNetworkFailedConnections(input, callback)
         input['networkId'] = 'networkId';
         input['t0'] = 't0';
         input['t1'] = 't1';
-        input['timespan'] = 12.3168405389026;
-        input['ssid'] = 12;
-        input['vlan'] = 12;
+        input['timespan'] = 11.1108258651154;
+        input['ssid'] = 11;
+        input['vlan'] = 11;
         input['apTag'] = 'apTag';
         input['serial'] = 'serial';
         input['clientId'] = 'clientId';
@@ -12220,9 +12157,9 @@ function getNetworkLatencyStats(input, callback)
         input['networkId'] = 'networkId';
         input['t0'] = 't0';
         input['t1'] = 't1';
-        input['timespan'] = 12.3168405389026;
-        input['ssid'] = 12;
-        input['vlan'] = 12;
+        input['timespan'] = 11.1108258651154;
+        input['ssid'] = 11;
+        input['vlan'] = 11;
         input['apTag'] = 'apTag';
         input['fields'] = 'fields';
 
