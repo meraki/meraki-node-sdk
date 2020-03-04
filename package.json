@@ -1,7 +1,7 @@
 {
   "name": "meraki",
   "version": "1.5.0",
-  "description": "The Cisco Meraki Dashboard API is a modern REST API based on the OpenAPI specification.  > Date: 03 February, 2020 > > [What's New](https://meraki.io/whats-new/)  ---  [API Documentation](https://meraki.io/api)  [Community Support](https://meraki.io/community)  [Meraki Homepage](https://www.meraki.com)",
+  "description": "The Cisco Meraki Dashboard API is a modern REST API based on the OpenAPI specification.  > Date: 04 March, 2020 > > [What's New](https://meraki.io/whats-new/)  ---  [API Documentation](https://meraki.io/api)  [Community Support](https://meraki.io/community)  [Meraki Homepage](https://www.meraki.com)",
   "main": "./lib/index.js",
   "repository": {
     "type": "git",
