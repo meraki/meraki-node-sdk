@@ -5,7 +5,7 @@
   "main": "./lib/index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/username/repository.git"
+    "url": "https://github.com/meraki/meraki-node-sdk.git"
   },
   "scripts": {
     "lint": "eslint lib"
